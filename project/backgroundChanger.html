@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        #black{
+            background-color: #000;
+        }
+        #gray{
+            background-color: gray;
+        }
+        #aqua{
+            background-color: aqua;
+        }
+        #yellow{
+            background-color: yellow;
+        }
+
+        h1{
+            color: rgb(10, 236, 55);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .buttons{
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Background Changer</h1>
+    <span class="buttons" id="black"></span>
+    <span class="buttons" id="gray"></span>
+    <span class="buttons" id="aqua"></span>
+    <span class="buttons" id="yellow"></span>
+
+</body>
+<script>
+    let btn = document.querySelectorAll(".buttons");
+    let text = document.querySelector("h1");
+    // console.log(btn);
+    let body = document.querySelector("body");
+
+    btn.forEach(function(btn){
+        console.log(btn);
+        btn.addEventListener("click",function(event){
+            // console.log(event)
+            //  console.log(btn.target);
+            switch(event.target.id){
+                case "black" : body.style.backgroundColor = event.target.id;
+                text.innerText = event.target.id;
+                case "gray" : body.style.backgroundColor = event.target.id;
+                text.innerText = event.target.id;
+                case "aqua" : body.style.backgroundColor = event.target.id;
+                text.innerText = event.target.id;
+                case "yellow" : body.style.backgroundColor = event.target.id;
+                text.innerText = event.target.id;
+                default  : "no change";
+            }
+        })
+    })
+
+</script>
+</html>

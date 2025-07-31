@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+</head>
+<style>
+    .buttons{
+       padding: 10px 30px;
+      margin-inline: 10px;
+       cursor: pointer; 
+       border: 1px solid gray;
+    }
+
+    #pink{
+       
+        background-color: pink;
+    }
+    #orange{
+        background-color: orange;
+    }
+    #red{
+        background-color: #d90e0e;
+    }
+    #green{
+        background-color: green;
+    }
+</style>
+<body>
+    <h1>Color Change</h1>
+    <span class="buttons" id="pink"> </span>
+    <span class="buttons" id="orange"></span>
+    <span class="buttons" id="red"></span>
+    <span class="buttons" id="green"></span>
+</body>
+<script>
+    const button = document.querySelectorAll(".buttons");
+    const body = document.querySelector("body");
+
+    button.forEach(function(button){
+        // console.log(button);
+        button.addEventListener('click',function(e){
+            // console.log(event);
+            // console.log(event.target);
+            if (e.target.id === 'pink'){
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'orange'){
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'red'){
+                body.style.backgroundColor = e.target.id;
+            }
+            if (e.target.id === 'green'){
+                body.style.backgroundColor = e.target.id;
+            }
+        })
+    })
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #222;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>c</li>
+    </ul>
+    
+</body>
+<script>
+    // function addLanguage(lang) {
+    //     let li = document.createElement('li');
+    //     li.innerText = `${lang}`;
+    //     document.querySelector('.language').appendChild(li);
+    // } 
+    // addLanguage("java");
+    // addLanguage("python"); //  ye idea sahi hai par aise karne par tree triverse karta hai optimize nhi hai
+   
+    function addLi(lang){
+        const li = document.createElement('li');
+        const text = document.createTextNode(lang);
+        li.appendChild(text);
+        document.querySelector('.language').appendChild(li);
+    }
+addLi("golu");
+addLi ("java") // ye hua optimize way me add hua
+addLi ("c") // ye hua optimize way me add hua
+addLi ("go") // ye hua optimize way me add hua
+addLi ("rust") // ye hua optimize way me add hua
+addLi ("rest") // ye hua optimize way me add hua
+addLi ("python") // ye hua optimize way me add hua
+addLi ("c++") // ye hua optimize way me add hua
+addLi ("go") // ye hua optimize way me add hua
+addLi ("java") // ye hua optimize way me add hua
+addLi ("golu") // ye hua optimize way me add hua
+addLi ("c++") // ye hua optimize way me add hua
+
+// edit 
+const edit = document.querySelector("li:nth-child(2)");
+// edit.innerHTML = "Golu"; // first way lekin not optimize 
+const newli = document.createElement('li');
+newli.textContent = "anshu";
+edit.replaceWith(newli);
+
+//edit 
+const first = document.querySelector('li:nth-child(1)');
+first.outerHTML = "<li>typescript</li>";// second way to edit 
+
+
+//remove
+
+const last = document.querySelector('li:nth-Child(1)');
+// last.remove();
+// last.remove();
+last.remove();// to remove li
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
